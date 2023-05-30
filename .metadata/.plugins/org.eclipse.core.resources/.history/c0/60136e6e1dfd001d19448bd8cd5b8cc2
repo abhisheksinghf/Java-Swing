@@ -1,0 +1,18 @@
+import javax.swing.JFrame;
+
+public class FirstGUI 
+{
+	public static void main(String[] args)
+	{
+		System.out.println("He");
+//		Abc a = new Abc();
+	}
+}
+//
+//class Abc extends JFrame
+//{
+//	public Abc()
+//	{
+//		
+//	}
+//}

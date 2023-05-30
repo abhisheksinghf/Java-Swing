@@ -1,0 +1,44 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Date_Difference_GUI extends JFrame{
+	
+	private static final long serialVersionUID = 1L;
+
+	private JTextField datefield1;
+	private JTextField datefield2;
+	private JLabel datelabel1;
+	private JLabel datelabel2;
+	private JButton submitButton;
+	
+	public Date_Difference_GUI()
+	{
+		super("Date Differnece");
+		
+		datelabel1 = new JLabel("Enter Date 1: ");
+		datefield1 = new JTextField(20);
+		datelabel2 = new JLabel("Enter Date 2: ");
+		datefield2 = new JTextField(20);
+		submitButton = new JButton("CHECK");
+		
+		add(datelabel1);
+		add(datefield1);
+		add(datelabel2);
+		add(datefield2);
+		add(submitButton);
+		
+		setLayout(new FlowLayout());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		setLocationRelativeTo(null);
+		setSize(500,500);
+	}
+	public static void main(String[] args)
+	{
+		new Date_Difference_GUI();
+	}
+}

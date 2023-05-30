@@ -1,0 +1,24 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class Addition {
+	public static void main(String[] args)
+	{
+		Sum s = new Sum();
+	}
+}
+
+class Sum extends JFrame
+{
+	public Sum()
+	{
+
+		setLayout(new FlowLayout());
+		JLabel l1 = new JLabel("Hello World");
+		setVisible(true);
+		setSize(400,400);
+		add(l1);
+	}
+}

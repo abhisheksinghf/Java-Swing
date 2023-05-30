@@ -1,0 +1,36 @@
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Addition {
+	public static void main(String[] args)
+	{
+		//First Create Object of this class Sum
+		Sum s = new Sum();
+	}
+}
+
+class Sum extends JFrame
+{
+	public Sum()
+	{
+		setLayout(new FlowLayout());
+		setVisible(true);
+		setSize(400,400);
+
+		JTextField t1 = new JTextField();
+		JTextField t2 = new JTextField();
+		JButton b1 = new JButton("ADD");
+		JLabel l1 = new JLabel("Result");
+		
+		add(t1);
+		add(t2);
+		add(b1);
+		add(l1);
+		
+		setDefaultCloseOperation(3);
+	}
+}

@@ -1,0 +1,62 @@
+import java.awt.FlowLayout;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Date_Difference_GUI extends JFrame{
+	
+	private static final long serialVersionUID = 1L;
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+	
+	private JTextField datefield1;
+	private JTextField datefield2;
+	private JLabel datelabel1;
+	private JLabel datelabel2;
+	private JButton submitButton;
+	private JLabel displayOutput;
+	
+	public Date_Difference_GUI()
+	{
+		super("Date Differnece");
+		
+		datelabel1 = new JLabel("Enter Date 1: ");
+		datefield1 = new JTextField(20);
+		datelabel2 = new JLabel("Enter Date 2: ");
+		datefield2 = new JTextField(20);
+		submitButton = new JButton("CHECK");
+		displayOutput = new JLabel("");
+		
+		add(datelabel1);
+		add(datefield1);
+		add(datelabel2);
+		add(datefield2);
+		add(submitButton);
+		add(displayOutput);
+		
+		private void calculateDifference()
+		{
+		String date1 = datelabel1.getText();
+		String date2 = datelabel2.getText();
+		
+		LocalDate date1 = LocalDate.parse(datefield1, formatter);
+
+//		int sum = Integer.parseInt(date1);
+//		
+//		displayOutput.setText(sum+"");
+		}
+		
+		setLayout(new FlowLayout());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		setLocationRelativeTo(null);
+		setSize(500,500);
+	}
+	public static void main(String[] args)
+	{
+		new Date_Difference_GUI();
+	}
+}

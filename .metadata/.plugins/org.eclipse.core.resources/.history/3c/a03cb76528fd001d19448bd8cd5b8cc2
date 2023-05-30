@@ -1,0 +1,55 @@
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Operations{
+	public static void main(String[] args)
+	{
+		//First Create Object of this class Sum
+		Sum s = new Sum();
+	}
+}
+
+class Sum extends JFrame
+{
+	JTextField t1,t2,t3;
+	JButton b1;
+	JButton b2;
+	JButton b3;
+	JButton b4;
+
+	public Sum()
+	{
+
+		t1 = new JTextField(20);
+		t2 = new JTextField(20);
+		b1 = new JButton("ADD");
+		t3 = new JTextField(20);
+
+		add(t1);
+		add(t2);
+		add(b1);
+		add(t1);
+		
+		//lamda expression( -> )
+		
+		b1.addActionListener( ae ->
+		{
+			int num1 = Integer.parseInt(t1.getText());
+			int num2 = Integer.parseInt(t2.getText());
+			
+			int value = num1 + num2;
+			
+			t1.setText(value+"");
+		}
+		);
+
+		setLayout(new FlowLayout());
+		setVisible(true);
+		setSize(400,400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+}

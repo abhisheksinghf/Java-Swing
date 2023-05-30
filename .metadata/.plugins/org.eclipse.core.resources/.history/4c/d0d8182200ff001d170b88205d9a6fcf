@@ -1,0 +1,26 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class Date_Difference_GUI extends JFrame{
+	
+	private JTextField datefield1;
+	private JTextField datefield2;
+	private JLabel datelabe1;
+	private JLabel datelabe2;
+	private JButton submitButton;
+	
+	public Date_Difference_GUI()
+	{
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		setLocationRelativeTo(null);
+		setSize(500,500);
+	}
+	public static void main(String[] args)
+	{
+		Date_Difference_GUI();
+	}
+}
